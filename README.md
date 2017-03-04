@@ -36,6 +36,7 @@ When a user clicks on the rotation icon at the top-right corner of a t-shirt box
 ##Media
 
 shirts
+
 http://tympanus.net/Blueprints/ProductGridLayout/images/1_front.png
 http://tympanus.net/Blueprints/ProductGridLayout/images/2_front.png
 http://tympanus.net/Blueprints/ProductGridLayout/images/3_front.png
