@@ -33,30 +33,45 @@ body {
     border: $main-border;
     flex: 1;
     margin: $main-margin;
-    display: relative;
+    position: relative;
 
     .rotate-shirt {
       border-bottom: $main-border;
       border-left: $main-border;
       padding: $main-padding/2;
-      float: right;
+      height: 45px;
+      position: absolute;
+      right: 0px;
 
       &:hover {
         background: $main-color;
         color: white;
       }
+
+      &:hover + .picture-container img {
+        transform: rotateY(180deg);
+      }
     }
 
-    .picture {
+    .picture-container {
       padding: $main-padding;
 
       img {
-        display: block;
+        // display: block;
         margin-bottom: $main-margin*2;
         margin-top: $main-margin;
         margin: auto;
+        transition: 1s transform ease;
+        transform-style: preserve-3d;
       }
     }
+  }
+
+  #imgBack1, #imgBack2, #imgBack3  {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 22px;
+    left: 22px;
   }
 
   .small-nav {
@@ -106,7 +121,6 @@ body {
 
     .tshirt {
       flex: 1;
-
     }
   }
 }
