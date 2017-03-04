@@ -1,3 +1,72 @@
-h1 {
-  color: blue;
+//------------------------------------------------------------------------------
+// Variables
+//------------------------------------------------------------------------------
+
+$main-margin: .5rem;
+$phone-max-width: 600px;
+$tablet-max-width: 960px;
+
+//------------------------------------------------------------------------------
+// css rules
+//------------------------------------------------------------------------------
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+div {
+  border: solid 1px black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: .5rem;
+
+  .tshirt {
+    flex: 1;
+    margin: $main-margin;
+
+    img {
+      display: block;
+      margin: auto;
+      margin-top: $main-margin;
+      margin-bottom: $main-margin*2;
+
+    }
+  }
+}
+
+/* tablets */
+@media only screen and (max-width: $tablet-max-width) {
+  .wrapper {
+    // background: lightgrey;
+    flex-direction: row;
+
+    .tshirt:nth-child(1),.tshirt:nth-child(2) {
+      flex: 50;
+    }
+
+    .tshirt:nth-child(3) {
+      flex: 100;
+    }
+  }
+}
+
+/* phones */
+@media only screen and (max-width: $phone-max-width) {
+  .wrapper {
+    // background: tomato;
+    flex-direction: column;
+
+    .tshirt {
+      flex: 1;
+    }
+  }
 }
