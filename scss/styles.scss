@@ -36,6 +36,24 @@ body {
     margin: $main-margin;
     position: relative;
 
+    .dropdown {
+      bottom: 63px;
+      box-shadow: 0 0 15px white;
+      position: absolute;
+      right: 40%;
+      text-align: center;
+      // visibility: hidden;
+      width: 20%;
+      z-index: 20;
+
+      div {
+        background: #eefaff;
+        border: $main-border;
+        border-bottom: none;
+        padding: $main-padding/2;
+      }
+    }
+
     .rotate-shirt {
       border-bottom: $main-border;
       border-left: $main-border;
@@ -43,6 +61,7 @@ body {
       padding: $main-padding/2;
       position: absolute;
       right: 0px;
+      transition: all .3s;
       z-index: 10;
 
       &:hover {
@@ -76,6 +95,10 @@ body {
     top: 0px;
   }
 
+  .dropdown  {
+    display: none;
+  }
+
   .small-nav {
     background: #eefaff;
     border-top: $main-border;
@@ -88,6 +111,7 @@ body {
       padding-bottom: 1rem;
       padding-top: 1rem;
       text-align: center;
+      transition: all .3s;
 
       &:last-child {
         border:none;
