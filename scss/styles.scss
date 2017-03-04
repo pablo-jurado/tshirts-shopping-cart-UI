@@ -3,8 +3,11 @@
 //------------------------------------------------------------------------------
 
 $main-margin: .5rem;
+$main-padding: 1.5rem;
 $phone-max-width: 600px;
 $tablet-max-width: 960px;
+$main-color: #03a9f4;
+$main-border: solid 3px $main-color;
 
 //------------------------------------------------------------------------------
 // css rules
@@ -18,10 +21,6 @@ body {
   font-size: 16px;
 }
 
-div {
-  border: solid 1px black;
-}
-
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -30,15 +29,44 @@ div {
   padding: .5rem;
 
   .tshirt {
+    border: $main-border;
     flex: 1;
     margin: $main-margin;
 
-    img {
-      display: block;
-      margin: auto;
-      margin-top: $main-margin;
-      margin-bottom: $main-margin*2;
+    .picture {
+      padding: $main-padding;
 
+      img {
+        display: block;
+        margin-bottom: $main-margin*2;
+        margin-top: $main-margin;
+        margin: auto;
+      }
+    }
+  }
+
+  .small-nav {
+    background: #eefaff;
+    border-top: $main-border;
+    display: flex;
+
+    div {
+      border-right: $main-border;
+      color: $main-color;
+      flex: 1;
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      text-align: center;
+
+      &:last-child {
+        border:none;
+      }
+
+      &:hover {
+        background: $main-color;
+        color: white;
+      }
     }
   }
 }
@@ -46,7 +74,6 @@ div {
 /* tablets */
 @media only screen and (max-width: $tablet-max-width) {
   .wrapper {
-    // background: lightgrey;
     flex-direction: row;
 
     .tshirt:nth-child(1),.tshirt:nth-child(2) {
@@ -62,11 +89,11 @@ div {
 /* phones */
 @media only screen and (max-width: $phone-max-width) {
   .wrapper {
-    // background: tomato;
     flex-direction: column;
 
     .tshirt {
       flex: 1;
+
     }
   }
 }
