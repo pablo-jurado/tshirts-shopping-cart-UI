@@ -19,6 +19,7 @@ $main-border: solid 3px $main-color;
 
 body {
   font-size: 16px;
+  margin: 0;
 }
 
 .wrapper {
@@ -38,10 +39,11 @@ body {
     .rotate-shirt {
       border-bottom: $main-border;
       border-left: $main-border;
-      padding: $main-padding/2;
       height: 45px;
+      padding: $main-padding/2;
       position: absolute;
       right: 0px;
+      z-index: 10;
 
       &:hover {
         background: $main-color;
@@ -54,13 +56,13 @@ body {
     }
 
     .picture-container {
-      padding: $main-padding;
+      height: 347px;
+      margin: 20px auto;
+      position: relative;
+      width: 360px;
+      z-index: 1;
 
       img {
-        // display: block;
-        margin-bottom: $main-margin*2;
-        margin-top: $main-margin;
-        margin: auto;
         transition: 1s transform ease;
         transform-style: preserve-3d;
       }
@@ -69,9 +71,9 @@ body {
 
   #imgBack1, #imgBack2, #imgBack3  {
     backface-visibility: hidden;
+    left: 0px;
     position: absolute;
-    top: 22px;
-    left: 22px;
+    top: 0px;
   }
 
   .small-nav {
@@ -118,6 +120,8 @@ body {
 @media only screen and (max-width: $phone-max-width) {
   .wrapper {
     flex-direction: column;
+    min-width: 400px;
+    margin: 0;
 
     .tshirt {
       flex: 1;
