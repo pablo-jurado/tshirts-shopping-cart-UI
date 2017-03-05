@@ -7,6 +7,7 @@ $main-padding: 1.5rem;
 $phone-max-width: 600px;
 $tablet-max-width: 960px;
 $main-color: #03a9f4;
+$lighter-color: lighten($main-color, 45%);
 $main-border: solid 3px $main-color;
 
 //------------------------------------------------------------------------------
@@ -38,55 +39,8 @@ body {
     position: relative;
     min-width: 400px;
 
-    .dropdown {
-      bottom: 63px;
-      color: $main-color;
-      left: 156px;
-      position: absolute;
-      text-align: center;
-      transition: all .3s;
-      visibility: hidden;
-      opacity: 0;
-      width: 81.5px;
-      z-index: 20;
-
-
-      .size {
-        background: #eefaff;
-        border: $main-border;
-        border-bottom: none;
-        padding: $main-padding/2;
-      }
-
-      .arrow, .arrow-border {
-        width: 0;
-        height: 0;
-        padding: 0;
-        margin: 0 auto;
-        position: absolute;
-      }
-
-      .arrow {
-        border-top: 10px solid #eefaff;
-        border-bottom: none;
-        border-right: 10px solid transparent;
-        border-left: 10px solid transparent;
-        position: absolute;
-        bottom: -10px;
-        left: 31px;
-      }
-
-      .arrow-border {
-        border-top: 13px solid $main-color;
-        border-bottom: none;
-        border-right: 13px solid transparent;
-        border-left: 13px solid transparent;
-        bottom: -13px;
-        left: 28px;
-      }
-    }
-
     .rotate-shirt {
+      background: $lighter-color;
       border-bottom: $main-border;
       border-left: $main-border;
       height: 45px;
@@ -120,7 +74,7 @@ body {
     }
   }
 
-  #imgBack1, #imgBack2, #imgBack3  {
+  .img-tshirt-back {
     backface-visibility: hidden;
     left: 0px;
     position: absolute;
@@ -128,7 +82,7 @@ body {
   }
 
   .small-nav {
-    background: #eefaff;
+    background: $lighter-color;
     border-top: $main-border;
     display: flex;
 
@@ -139,7 +93,7 @@ body {
       padding-bottom: 1rem;
       padding-top: 1rem;
       text-align: center;
-      // transition: all .3s;
+      transition: all .2s;
 
       &:last-child {
         border:none;
@@ -154,6 +108,63 @@ body {
     .btn-size:hover > .dropdown {
       visibility: visible;
       opacity: 1;
+      transform: translate(0, 13px);
+
+      .size:hover {
+        background: $main-color;
+        color: white;
+      }
+    }
+
+    .dropdown {
+      bottom: 73px;
+      color: $main-color;
+      left: 156px;
+      position: absolute;
+      text-align: center;
+      transition: all .3s;
+      visibility: hidden;
+      opacity: 0;
+      width: 81.5px;
+      z-index: 20;
+
+      .size {
+        background: $lighter-color;
+        border: $main-border;
+        border-bottom: none;
+        padding: $main-padding/2;
+      }
+
+      .size:nth-child(4){
+        border-bottom: $main-border;
+      }
+
+      .arrow, .arrow-border {
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0 auto;
+        position: absolute;
+      }
+
+      .arrow {
+        border-top: 10px solid $lighter-color;
+        border-bottom: none;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        position: absolute;
+        bottom: -7px;
+        left: 31px;
+      }
+
+      .arrow-border {
+        border-top: 13px solid $main-color;
+        border-bottom: none;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        bottom: -10px;
+        left: 28px;
+      }
     }
   }
 }

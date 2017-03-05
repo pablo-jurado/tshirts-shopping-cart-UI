@@ -18,44 +18,8 @@ body {
     margin: 0.5rem;
     position: relative;
     min-width: 400px; }
-    .wrapper .tshirt .dropdown {
-      bottom: 63px;
-      color: #03a9f4;
-      left: 156px;
-      position: absolute;
-      text-align: center;
-      transition: all .3s;
-      visibility: hidden;
-      opacity: 0;
-      width: 81.5px;
-      z-index: 20; }
-      .wrapper .tshirt .dropdown .size {
-        background: #eefaff;
-        border: solid 3px #03a9f4;
-        border-bottom: none;
-        padding: 0.75rem; }
-      .wrapper .tshirt .dropdown .arrow, .wrapper .tshirt .dropdown .arrow-border {
-        width: 0;
-        height: 0;
-        padding: 0;
-        margin: 0 auto;
-        position: absolute; }
-      .wrapper .tshirt .dropdown .arrow {
-        border-top: 10px solid #eefaff;
-        border-bottom: none;
-        border-right: 10px solid transparent;
-        border-left: 10px solid transparent;
-        position: absolute;
-        bottom: -10px;
-        left: 31px; }
-      .wrapper .tshirt .dropdown .arrow-border {
-        border-top: 13px solid #03a9f4;
-        border-bottom: none;
-        border-right: 13px solid transparent;
-        border-left: 13px solid transparent;
-        bottom: -13px;
-        left: 28px; }
     .wrapper .tshirt .rotate-shirt {
+      background: #def4ff;
       border-bottom: solid 3px #03a9f4;
       border-left: solid 3px #03a9f4;
       height: 45px;
@@ -78,13 +42,13 @@ body {
       .wrapper .tshirt .picture-container img {
         transition: 1s transform ease;
         transform-style: preserve-3d; }
-  .wrapper #imgBack1, .wrapper #imgBack2, .wrapper #imgBack3 {
+  .wrapper .img-tshirt-back {
     backface-visibility: hidden;
     left: 0px;
     position: absolute;
     top: 0px; }
   .wrapper .small-nav {
-    background: #eefaff;
+    background: #def4ff;
     border-top: solid 3px #03a9f4;
     display: flex; }
     .wrapper .small-nav > div {
@@ -93,7 +57,8 @@ body {
       font-size: 1.5rem;
       padding-bottom: 1rem;
       padding-top: 1rem;
-      text-align: center; }
+      text-align: center;
+      transition: all .2s; }
       .wrapper .small-nav > div:last-child {
         border: none; }
       .wrapper .small-nav > div:hover {
@@ -101,7 +66,50 @@ body {
         color: white; }
     .wrapper .small-nav .btn-size:hover > .dropdown {
       visibility: visible;
-      opacity: 1; }
+      opacity: 1;
+      transform: translate(0, 13px); }
+      .wrapper .small-nav .btn-size:hover > .dropdown .size:hover {
+        background: #03a9f4;
+        color: white; }
+    .wrapper .small-nav .dropdown {
+      bottom: 73px;
+      color: #03a9f4;
+      left: 156px;
+      position: absolute;
+      text-align: center;
+      transition: all .3s;
+      visibility: hidden;
+      opacity: 0;
+      width: 81.5px;
+      z-index: 20; }
+      .wrapper .small-nav .dropdown .size {
+        background: #def4ff;
+        border: solid 3px #03a9f4;
+        border-bottom: none;
+        padding: 0.75rem; }
+      .wrapper .small-nav .dropdown .size:nth-child(4) {
+        border-bottom: solid 3px #03a9f4; }
+      .wrapper .small-nav .dropdown .arrow, .wrapper .small-nav .dropdown .arrow-border {
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0 auto;
+        position: absolute; }
+      .wrapper .small-nav .dropdown .arrow {
+        border-top: 10px solid #def4ff;
+        border-bottom: none;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        position: absolute;
+        bottom: -7px;
+        left: 31px; }
+      .wrapper .small-nav .dropdown .arrow-border {
+        border-top: 13px solid #03a9f4;
+        border-bottom: none;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        bottom: -10px;
+        left: 28px; }
 
 /* tablets */
 /* phones */
