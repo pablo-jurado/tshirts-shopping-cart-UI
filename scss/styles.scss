@@ -36,16 +36,16 @@ body {
     // flex: 1;
     margin: $main-margin;
     position: relative;
-    width: 400px;
+    min-width: 400px;
 
     .dropdown {
       bottom: 63px;
-      box-shadow: 0 0 15px white;
+      // box-shadow: 0 0 15px #eefaff;
       position: absolute;
-      right: 40%;
+      left: 156px;
       text-align: center;
       // visibility: hidden;
-      width: 20%;
+      width: 81.5px;
       z-index: 20;
 
       div {
@@ -95,10 +95,6 @@ body {
     left: 0px;
     position: absolute;
     top: 0px;
-  }
-
-  .dropdown  {
-    display: none;
   }
 
   .small-nav {

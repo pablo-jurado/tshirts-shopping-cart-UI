@@ -17,14 +17,13 @@ body {
     border: solid 3px #03a9f4;
     margin: 0.5rem;
     position: relative;
-    width: 400px; }
+    min-width: 400px; }
     .wrapper .tshirt .dropdown {
       bottom: 63px;
-      box-shadow: 0 0 15px white;
       position: absolute;
-      right: 40%;
+      left: 156px;
       text-align: center;
-      width: 20%;
+      width: 81.5px;
       z-index: 20; }
       .wrapper .tshirt .dropdown div {
         background: #eefaff;
@@ -59,8 +58,6 @@ body {
     left: 0px;
     position: absolute;
     top: 0px; }
-  .wrapper .dropdown {
-    display: none; }
   .wrapper .small-nav {
     background: #eefaff;
     border-top: solid 3px #03a9f4;
