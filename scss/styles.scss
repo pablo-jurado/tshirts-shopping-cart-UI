@@ -39,12 +39,11 @@ body {
     min-width: 400px;
 
     .dropdown {
-      bottom: 63px;
-      // box-shadow: 0 0 15px #eefaff;
+      bottom: 47px;
       position: absolute;
       left: 156px;
       text-align: center;
-      // visibility: hidden;
+      visibility: hidden;
       width: 81.5px;
       z-index: 20;
 
@@ -69,7 +68,7 @@ body {
         border-right: 10px solid transparent;
         border-left: 10px solid transparent;
         position: absolute;
-        bottom: -10px;
+        bottom: 6px;
         left: 31px;
       }
 
@@ -78,10 +77,11 @@ body {
         border-bottom: none;
         border-right: 13px solid transparent;
         border-left: 13px solid transparent;
-        bottom: -13px;
+        bottom: 2px;
         left: 28px;
       }
     }
+
     .rotate-shirt {
       border-bottom: $main-border;
       border-left: $main-border;
@@ -128,14 +128,14 @@ body {
     border-top: $main-border;
     display: flex;
 
-    div {
+     div {
       border-right: $main-border;
       flex: 1;
       font-size: 1.5rem;
       padding-bottom: 1rem;
       padding-top: 1rem;
       text-align: center;
-      transition: all .3s;
+      // transition: all .3s;
 
       &:last-child {
         border:none;
@@ -145,6 +145,10 @@ body {
         background: $main-color;
         color: white;
       }
+    }
+
+    .btn-size:hover > .dropdown {
+      visibility: visible;
     }
   }
 }

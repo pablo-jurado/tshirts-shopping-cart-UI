@@ -19,10 +19,11 @@ body {
     position: relative;
     min-width: 400px; }
     .wrapper .tshirt .dropdown {
-      bottom: 63px;
+      bottom: 47px;
       position: absolute;
       left: 156px;
       text-align: center;
+      visibility: hidden;
       width: 81.5px;
       z-index: 20; }
       .wrapper .tshirt .dropdown .size {
@@ -42,14 +43,14 @@ body {
         border-right: 10px solid transparent;
         border-left: 10px solid transparent;
         position: absolute;
-        bottom: -10px;
+        bottom: 6px;
         left: 31px; }
       .wrapper .tshirt .dropdown .arrow-border {
         border-top: 13px solid #03a9f4;
         border-bottom: none;
         border-right: 13px solid transparent;
         border-left: 13px solid transparent;
-        bottom: -13px;
+        bottom: 2px;
         left: 28px; }
     .wrapper .tshirt .rotate-shirt {
       border-bottom: solid 3px #03a9f4;
@@ -89,13 +90,14 @@ body {
       font-size: 1.5rem;
       padding-bottom: 1rem;
       padding-top: 1rem;
-      text-align: center;
-      transition: all .3s; }
+      text-align: center; }
       .wrapper .small-nav div:last-child {
         border: none; }
       .wrapper .small-nav div:hover {
         background: #03a9f4;
         color: white; }
+    .wrapper .small-nav .btn-size:hover > .dropdown {
+      visibility: visible; }
 
 /* tablets */
 /* phones */
