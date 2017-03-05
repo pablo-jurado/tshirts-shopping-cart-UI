@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  margin: 0; }
+
+.wrapper {
+  color: #03a9f4;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: .5rem;
+  justify-content: center; }
+  .wrapper .tshirt {
+    border: solid 3px #03a9f4;
+    margin: 0.5rem;
+    position: relative;
+    width: 400px; }
+    .wrapper .tshirt .dropdown {
+      bottom: 63px;
+      box-shadow: 0 0 15px white;
+      position: absolute;
+      right: 40%;
+      text-align: center;
+      width: 20%;
+      z-index: 20; }
+      .wrapper .tshirt .dropdown div {
+        background: #eefaff;
+        border: solid 3px #03a9f4;
+        border-bottom: none;
+        padding: 0.75rem; }
+    .wrapper .tshirt .rotate-shirt {
+      border-bottom: solid 3px #03a9f4;
+      border-left: solid 3px #03a9f4;
+      height: 45px;
+      padding: 0.75rem;
+      position: absolute;
+      right: 0px;
+      transition: all .3s;
+      z-index: 10; }
+      .wrapper .tshirt .rotate-shirt:hover {
+        background: #03a9f4;
+        color: white; }
+      .wrapper .tshirt .rotate-shirt:hover + .picture-container img {
+        transform: rotateY(180deg); }
+    .wrapper .tshirt .picture-container {
+      height: 347px;
+      margin: 20px auto;
+      position: relative;
+      width: 360px;
+      z-index: 1; }
+      .wrapper .tshirt .picture-container img {
+        transition: 1s transform ease;
+        transform-style: preserve-3d; }
+  .wrapper #imgBack1, .wrapper #imgBack2, .wrapper #imgBack3 {
+    backface-visibility: hidden;
+    left: 0px;
+    position: absolute;
+    top: 0px; }
+  .wrapper .dropdown {
+    display: none; }
+  .wrapper .small-nav {
+    background: #eefaff;
+    border-top: solid 3px #03a9f4;
+    display: flex; }
+    .wrapper .small-nav div {
+      border-right: solid 3px #03a9f4;
+      flex: 1;
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      text-align: center;
+      transition: all .3s; }
+      .wrapper .small-nav div:last-child {
+        border: none; }
+      .wrapper .small-nav div:hover {
+        background: #03a9f4;
+        color: white; }
+
+/* tablets */
+/* phones */
+
+/*# sourceMappingURL=styles.css.map */

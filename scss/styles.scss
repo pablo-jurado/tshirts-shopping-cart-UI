@@ -29,12 +29,14 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   padding: .5rem;
+  justify-content: center;
 
   .tshirt {
     border: $main-border;
-    flex: 1;
+    // flex: 1;
     margin: $main-margin;
     position: relative;
+    width: 400px;
 
     .dropdown {
       bottom: 63px;
@@ -126,29 +128,28 @@ body {
 }
 
 /* tablets */
-@media only screen and (max-width: $tablet-max-width) {
-  .wrapper {
-    flex-direction: row;
-
-    .tshirt:nth-child(1),.tshirt:nth-child(2) {
-      flex: 50;
-    }
-
-    .tshirt:nth-child(3) {
-      flex: 100;
-    }
-  }
-}
+// @media only screen and (max-width: $tablet-max-width) {
+//   .wrapper {
+//     flex-direction: row;
+//
+//     .tshirt:nth-child(1),.tshirt:nth-child(2) {
+//       flex: 50;
+//     }
+//
+//     .tshirt:nth-child(3) {
+//       flex: 100;
+//     }
+//   }
+// }
 
 /* phones */
-@media only screen and (max-width: $phone-max-width) {
-  .wrapper {
-    flex-direction: column;
-    min-width: 400px;
-    margin: 0;
-
-    .tshirt {
-      flex: 1;
-    }
-  }
-}
+// @media only screen and (max-width: $phone-max-width) {
+//   .wrapper {
+//     flex-direction: column;
+//     margin: 0;
+//
+//     .tshirt {
+//       flex: 1;
+//     }
+//   }
+// }
