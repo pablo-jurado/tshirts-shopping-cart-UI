@@ -19,11 +19,14 @@ body {
     position: relative;
     min-width: 400px; }
     .wrapper .tshirt .dropdown {
-      bottom: 47px;
-      position: absolute;
+      bottom: 63px;
+      color: #03a9f4;
       left: 156px;
+      position: absolute;
       text-align: center;
+      transition: all .3s;
       visibility: hidden;
+      opacity: 0;
       width: 81.5px;
       z-index: 20; }
       .wrapper .tshirt .dropdown .size {
@@ -43,14 +46,14 @@ body {
         border-right: 10px solid transparent;
         border-left: 10px solid transparent;
         position: absolute;
-        bottom: 6px;
+        bottom: -10px;
         left: 31px; }
       .wrapper .tshirt .dropdown .arrow-border {
         border-top: 13px solid #03a9f4;
         border-bottom: none;
         border-right: 13px solid transparent;
         border-left: 13px solid transparent;
-        bottom: 2px;
+        bottom: -13px;
         left: 28px; }
     .wrapper .tshirt .rotate-shirt {
       border-bottom: solid 3px #03a9f4;
@@ -84,20 +87,21 @@ body {
     background: #eefaff;
     border-top: solid 3px #03a9f4;
     display: flex; }
-    .wrapper .small-nav div {
+    .wrapper .small-nav > div {
       border-right: solid 3px #03a9f4;
       flex: 1;
       font-size: 1.5rem;
       padding-bottom: 1rem;
       padding-top: 1rem;
       text-align: center; }
-      .wrapper .small-nav div:last-child {
+      .wrapper .small-nav > div:last-child {
         border: none; }
-      .wrapper .small-nav div:hover {
+      .wrapper .small-nav > div:hover {
         background: #03a9f4;
         color: white; }
     .wrapper .small-nav .btn-size:hover > .dropdown {
-      visibility: visible; }
+      visibility: visible;
+      opacity: 1; }
 
 /* tablets */
 /* phones */
