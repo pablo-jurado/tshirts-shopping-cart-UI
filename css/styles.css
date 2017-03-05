@@ -25,11 +25,32 @@ body {
       text-align: center;
       width: 81.5px;
       z-index: 20; }
-      .wrapper .tshirt .dropdown div {
+      .wrapper .tshirt .dropdown .size {
         background: #eefaff;
         border: solid 3px #03a9f4;
         border-bottom: none;
         padding: 0.75rem; }
+      .wrapper .tshirt .dropdown .arrow, .wrapper .tshirt .dropdown .arrow-border {
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0 auto;
+        position: absolute; }
+      .wrapper .tshirt .dropdown .arrow {
+        border-top: 10px solid #eefaff;
+        border-bottom: none;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        position: absolute;
+        bottom: -10px;
+        left: 31px; }
+      .wrapper .tshirt .dropdown .arrow-border {
+        border-top: 13px solid #03a9f4;
+        border-bottom: none;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        bottom: -13px;
+        left: 28px; }
     .wrapper .tshirt .rotate-shirt {
       border-bottom: solid 3px #03a9f4;
       border-left: solid 3px #03a9f4;
