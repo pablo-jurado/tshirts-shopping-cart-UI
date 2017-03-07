@@ -2,13 +2,13 @@
 // Variables
 //------------------------------------------------------------------------------
 
-$main-margin: .5rem;
-$main-padding: 1.5rem;
-$phone-max-width: 600px;
-$tablet-max-width: 960px;
-$main-color: #03a9f4;
-$lighter-color: lighten($main-color, 45%);
-$main-border: solid 3px $main-color;
+$mainMargin: .5rem;
+$mainPadding: 1.5rem;
+$phoneMaxWidth: 600px;
+$tabletMaxWidth: 960px;
+$mainColor: #03a9f4;
+$lighterColor: lighten($mainColor, 45%);
+$mainBorder: solid 3px $mainColor;
 
 //------------------------------------------------------------------------------
 // css rules
@@ -24,153 +24,154 @@ body {
 }
 
 .wrapper {
-  color: $main-color;
+  color: $mainColor;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: .5rem;
   justify-content: center;
+}
 
-  .tshirt {
-    border: $main-border;
-    // flex: 1;
-    margin: $main-margin;
+.tshirt {
+  border: $mainBorder;
+  // flex: 1;
+  margin: $mainMargin;
+  position: relative;
+  min-width: 400px;
+
+  .picture-container {
+    height: 347px;
+    margin: 20px auto;
     position: relative;
-    min-width: 400px;
+    width: 360px;
+    z-index: 1;
 
-    .rotate-shirt {
-      background: $lighter-color;
-      border-bottom: $main-border;
-      border-left: $main-border;
-      height: 45px;
-      padding: $main-padding/2;
-      position: absolute;
-      right: 0px;
-      transition: all .3s;
-      z-index: 10;
-
-      &:hover {
-        background: $main-color;
-        color: white;
-      }
-
-      &:hover + .picture-container img {
-        transform: rotateY(180deg);
-      }
-    }
-
-    .picture-container {
-      height: 347px;
-      margin: 20px auto;
-      position: relative;
-      width: 360px;
-      z-index: 1;
-
-      img {
-        transition: 1s transform ease;
-        transform-style: preserve-3d;
-      }
-    }
-  }
-
-  .img-tshirt-back {
-    backface-visibility: hidden;
-    left: 0px;
-    position: absolute;
-    top: 0px;
-  }
-
-  .small-nav {
-    background: $lighter-color;
-    border-top: $main-border;
-    display: flex;
-
-     > div {
-      border-right: $main-border;
-      flex: 1;
-      font-size: 1.5rem;
-      padding-bottom: 1rem;
-      padding-top: 1rem;
-      text-align: center;
-      transition: all .2s;
-
-      &:last-child {
-        border:none;
-      }
-
-      &:hover {
-        background: $main-color;
-        color: white;
-      }
-    }
-
-    .btn-size:hover > .dropdown {
-      visibility: visible;
-      opacity: 1;
-      transform: translate(0, 13px);
-
-      .size:hover {
-        background: $main-color;
-        color: white;
-      }
-    }
-
-    .dropdown {
-      bottom: 73px;
-      color: $main-color;
-      left: 156px;
-      position: absolute;
-      text-align: center;
-      transition: all .3s;
-      visibility: hidden;
-      opacity: 0;
-      width: 81.5px;
-      z-index: 20;
-
-      .size {
-        background: $lighter-color;
-        border: $main-border;
-        border-bottom: none;
-        padding: $main-padding/2;
-      }
-
-      .size:nth-child(4){
-        border-bottom: $main-border;
-      }
-
-      .arrow, .arrow-border {
-        width: 0;
-        height: 0;
-        padding: 0;
-        margin: 0 auto;
-        position: absolute;
-      }
-
-      .arrow {
-        border-top: 10px solid $lighter-color;
-        border-bottom: none;
-        border-right: 10px solid transparent;
-        border-left: 10px solid transparent;
-        position: absolute;
-        bottom: -7px;
-        left: 31px;
-      }
-
-      .arrow-border {
-        border-top: 13px solid $main-color;
-        border-bottom: none;
-        border-right: 13px solid transparent;
-        border-left: 13px solid transparent;
-        bottom: -10px;
-        left: 28px;
-      }
+    img {
+      transition: 1s transform ease;
+      transform-style: preserve-3d;
     }
   }
 }
 
+.img-tshirt-back {
+  backface-visibility: hidden;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.small-nav {
+  background: $lighterColor;
+  border-top: $mainBorder;
+  display: flex;
+
+   > div {
+    border-right: $mainBorder;
+    flex: 1;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+    transition: all .2s;
+
+    &:last-child {
+      border:none;
+    }
+
+    &:hover {
+      background: $mainColor;
+      color: white;
+    }
+  }
+
+  .btn-size:hover > .dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 13px);
+
+    .size:hover {
+      background: $mainColor;
+      color: white;
+    }
+  }
+}
+
+.rotate-shirt {
+  background: $lighterColor;
+  border-bottom: $mainBorder;
+  border-left: $mainBorder;
+  height: 45px;
+  padding: $mainPadding/2;
+  position: absolute;
+  right: 0px;
+  transition: all .3s;
+  z-index: 10;
+
+  &:hover {
+    background: $mainColor;
+    color: white;
+  }
+
+  &:hover + .picture-container img {
+    transform: rotateY(180deg);
+  }
+}
+
+.dropdown {
+  bottom: 73px;
+  color: $mainColor;
+  left: 156px;
+  position: absolute;
+  text-align: center;
+  transition: all .3s;
+  visibility: hidden;
+  opacity: 0;
+  width: 81.5px;
+  z-index: 20;
+
+  .size {
+    background: $lighterColor;
+    border: $mainBorder;
+    border-bottom: none;
+    padding: $mainPadding/2;
+  }
+
+  .size:nth-child(4){
+    border-bottom: $mainBorder;
+  }
+
+  .arrow, .arrow-border {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0 auto;
+    position: absolute;
+  }
+
+  .arrow {
+    border-top: 10px solid $lighterColor;
+    border-bottom: none;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    bottom: -7px;
+    left: 31px;
+  }
+
+  .arrow-border {
+    border-top: 13px solid $mainColor;
+    border-bottom: none;
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
+    bottom: -10px;
+    left: 28px;
+  }
+}
+
+
 /* tablets */
-// @media only screen and (max-width: $tablet-max-width) {
+// @media only screen and (max-width: $tabletMaxWidth) {
 //   .wrapper {
 //     flex-direction: row;
 //
@@ -185,7 +186,7 @@ body {
 // }
 
 /* phones */
-// @media only screen and (max-width: $phone-max-width) {
+// @media only screen and (max-width: $phoneMaxWidth) {
 //   .wrapper {
 //     flex-direction: column;
 //     margin: 0;

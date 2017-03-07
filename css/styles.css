@@ -13,105 +13,108 @@ body {
   margin: 0 auto;
   padding: .5rem;
   justify-content: center; }
-  .wrapper .tshirt {
-    border: solid 3px #03a9f4;
-    margin: 0.5rem;
+
+.tshirt {
+  border: solid 3px #03a9f4;
+  margin: 0.5rem;
+  position: relative;
+  min-width: 400px; }
+  .tshirt .picture-container {
+    height: 347px;
+    margin: 20px auto;
     position: relative;
-    min-width: 400px; }
-    .wrapper .tshirt .rotate-shirt {
-      background: #def4ff;
-      border-bottom: solid 3px #03a9f4;
-      border-left: solid 3px #03a9f4;
-      height: 45px;
-      padding: 0.75rem;
-      position: absolute;
-      right: 0px;
-      transition: all .3s;
-      z-index: 10; }
-      .wrapper .tshirt .rotate-shirt:hover {
-        background: #03a9f4;
-        color: white; }
-      .wrapper .tshirt .rotate-shirt:hover + .picture-container img {
-        transform: rotateY(180deg); }
-    .wrapper .tshirt .picture-container {
-      height: 347px;
-      margin: 20px auto;
-      position: relative;
-      width: 360px;
-      z-index: 1; }
-      .wrapper .tshirt .picture-container img {
-        transition: 1s transform ease;
-        transform-style: preserve-3d; }
-  .wrapper .img-tshirt-back {
-    backface-visibility: hidden;
-    left: 0px;
-    position: absolute;
-    top: 0px; }
-  .wrapper .small-nav {
+    width: 360px;
+    z-index: 1; }
+    .tshirt .picture-container img {
+      transition: 1s transform ease;
+      transform-style: preserve-3d; }
+
+.img-tshirt-back {
+  backface-visibility: hidden;
+  left: 0px;
+  position: absolute;
+  top: 0px; }
+
+.small-nav {
+  background: #def4ff;
+  border-top: solid 3px #03a9f4;
+  display: flex; }
+  .small-nav > div {
+    border-right: solid 3px #03a9f4;
+    flex: 1;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+    transition: all .2s; }
+    .small-nav > div:last-child {
+      border: none; }
+    .small-nav > div:hover {
+      background: #03a9f4;
+      color: white; }
+  .small-nav .btn-size:hover > .dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 13px); }
+    .small-nav .btn-size:hover > .dropdown .size:hover {
+      background: #03a9f4;
+      color: white; }
+
+.rotate-shirt {
+  background: #def4ff;
+  border-bottom: solid 3px #03a9f4;
+  border-left: solid 3px #03a9f4;
+  height: 45px;
+  padding: 0.75rem;
+  position: absolute;
+  right: 0px;
+  transition: all .3s;
+  z-index: 10; }
+  .rotate-shirt:hover {
+    background: #03a9f4;
+    color: white; }
+  .rotate-shirt:hover + .picture-container img {
+    transform: rotateY(180deg); }
+
+.dropdown {
+  bottom: 73px;
+  color: #03a9f4;
+  left: 156px;
+  position: absolute;
+  text-align: center;
+  transition: all .3s;
+  visibility: hidden;
+  opacity: 0;
+  width: 81.5px;
+  z-index: 20; }
+  .dropdown .size {
     background: #def4ff;
-    border-top: solid 3px #03a9f4;
-    display: flex; }
-    .wrapper .small-nav > div {
-      border-right: solid 3px #03a9f4;
-      flex: 1;
-      font-size: 1.5rem;
-      padding-bottom: 1rem;
-      padding-top: 1rem;
-      text-align: center;
-      transition: all .2s; }
-      .wrapper .small-nav > div:last-child {
-        border: none; }
-      .wrapper .small-nav > div:hover {
-        background: #03a9f4;
-        color: white; }
-    .wrapper .small-nav .btn-size:hover > .dropdown {
-      visibility: visible;
-      opacity: 1;
-      transform: translate(0, 13px); }
-      .wrapper .small-nav .btn-size:hover > .dropdown .size:hover {
-        background: #03a9f4;
-        color: white; }
-    .wrapper .small-nav .dropdown {
-      bottom: 73px;
-      color: #03a9f4;
-      left: 156px;
-      position: absolute;
-      text-align: center;
-      transition: all .3s;
-      visibility: hidden;
-      opacity: 0;
-      width: 81.5px;
-      z-index: 20; }
-      .wrapper .small-nav .dropdown .size {
-        background: #def4ff;
-        border: solid 3px #03a9f4;
-        border-bottom: none;
-        padding: 0.75rem; }
-      .wrapper .small-nav .dropdown .size:nth-child(4) {
-        border-bottom: solid 3px #03a9f4; }
-      .wrapper .small-nav .dropdown .arrow, .wrapper .small-nav .dropdown .arrow-border {
-        width: 0;
-        height: 0;
-        padding: 0;
-        margin: 0 auto;
-        position: absolute; }
-      .wrapper .small-nav .dropdown .arrow {
-        border-top: 10px solid #def4ff;
-        border-bottom: none;
-        border-right: 10px solid transparent;
-        border-left: 10px solid transparent;
-        position: absolute;
-        bottom: -7px;
-        left: 31px; }
-      .wrapper .small-nav .dropdown .arrow-border {
-        border-top: 13px solid #03a9f4;
-        border-bottom: none;
-        border-right: 13px solid transparent;
-        border-left: 13px solid transparent;
-        bottom: -10px;
-        left: 28px; }
+    border: solid 3px #03a9f4;
+    border-bottom: none;
+    padding: 0.75rem; }
+  .dropdown .size:nth-child(4) {
+    border-bottom: solid 3px #03a9f4; }
+  .dropdown .arrow, .dropdown .arrow-border {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0 auto;
+    position: absolute; }
+  .dropdown .arrow {
+    border-top: 10px solid #def4ff;
+    border-bottom: none;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    bottom: -7px;
+    left: 31px; }
+  .dropdown .arrow-border {
+    border-top: 13px solid #03a9f4;
+    border-bottom: none;
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
+    bottom: -10px;
+    left: 28px; }
 
 /* tablets */
 /* phones */
-
-/*# sourceMappingURL=styles.css.map */
